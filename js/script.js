@@ -68,7 +68,7 @@ function size(x) {
 	$('#recipe1').children('li').click(checkboxChange(1));
   $('#recipe2').children('li').click(checkboxChange(2));
 
-	$(".addIngredient").on("click", function () {
+	$(".addIngredient2").on("click", function () {
 
 		var inputIng = '<input type="text" id="newIngredient">';
 		var confirmInput = '<a class="btnStyle3 btnStyle confirmInput">&#10004;</a>';
