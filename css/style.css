@@ -1,3 +1,24 @@
+
+h1 {
+  margin: 0;
+  padding: 21px;
+  background: #eb4d4b;
+  color: #fff;
+  font-family: 'Dancing Script', cursive;
+  font-size: 29px;
+  line-height: 33px;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 37px;
+  line-height: 42px;
+  margin-top: 21px;
+  margin-bottom: 21px;
+  text-align: center;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -21,32 +42,11 @@
 
 body {
   margin: 0;
-  background: #eee url("http://source.unsplash.com/U9-D7wwurT8/1080x1920") 50% 35%/cover no-repeat padding-box padding-box local;
+  background: #eee url("https://source.unsplash.com/U9-D7wwurT8/1080x1920") 50% 35%/cover no-repeat padding-box padding-box local;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 21px;
 }
-
-h1 {
-  margin: 0;
-  padding: 21px;
-  background: #eb4d4b;
-  color: #fff;
-  font-family: 'Dancing Script', cursive;
-  font-size: 29px;
-  line-height: 33px;
-  text-align: center;
-}
-
-h2 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 37px;
-  line-height: 42px;
-  margin-top: 21px;
-  margin-bottom: 21px;
-  text-align: center;
-}
-
 main {
   display: flex;
   margin: 21px auto 0 auto;
