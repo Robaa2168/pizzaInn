@@ -3,7 +3,7 @@
 
 This is a web page which allows user to order Pizza online. User can choose size from small,medium and Large he/she also has options to choose on toppings they like
 ## Live DEMO
-You can find the working example here: [ https://robaa2168.github.io/triangle-tracker/]
+You can find the working example here: [https://robaa2168.github.io/pizzaInn/.]
 
 ## Installation
 All the external dependencies has been included using CDN. You only need to upload the HTML and CSS files to your host.
