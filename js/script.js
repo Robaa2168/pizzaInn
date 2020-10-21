@@ -65,6 +65,41 @@ function size(x) {
 		});
 	}
 
+	$('#recipe1').children('li').click(checkboxChange(1));
+  $('#recipe2').children('li').click(checkboxChange(2));
+
+	$(".addIngredient").on("click", function () {
+
+		var inputIng = '<input type="text" id="newIngredient">';
+		var confirmInput = '<a class="btnStyle3 btnStyle confirmInput">&#10004;</a>';
+		var cancelInput = '<a class="btnStyle3 btnStyle cancelInput">&#10008;</a>';
+		var inputWrap = '<div class="addIngredientWrap">' + inputIng + confirmInput + cancelInput + '</div>'
+		$(this).parent().children("ul").after(inputWrap);
+    $("#newIngredient").focus();
+    $("#newIngredient").attr("placeholder", "separate ingredients with a comma");
+
+		$(".addIngredientWrap > .confirmInput").on("click", function () {
+			if ($("#newIngredient").val() != "") {
+				var newIngredient = ($(".addIngredientWrap input").val()).split(",");
+				var newCheckbox = '<input type="checkbox" checked>';
+
+        for (var i = 0; i < newIngredient.length; i++){
+         $(this).parent().siblings("ul").append("<li>" + newCheckbox + newIngredient[i] + "  (+50Ksh)</li>");
+        }
+
+
+				$('#recipe1').children('li').click(checkboxChange(1));
+				$('#recipe2').children('li').click(checkboxChange(2));
+
+				$(this).parent().remove();
+			}else{
+				$("#newIngredient").attr("placeholder", "Please add Toppings");
+			}
+		});	$(".addIngredientWrap > .cancelInput").on("click", function () {
+			$(this).parent().remove();
+		})
+	})
+
 	$(".listOver").on("click", function () {
 		var orderName = '<h3 class="orderName"><span>' + $(this).parent().siblings(".ui-dialog-titlebar").children("span").text() + '</span><a class="delBtn">&#10008;</a>' +'</h3>';
 		var orderIngredients = '<ul class="orderIngredients"></ul>';
@@ -77,12 +112,17 @@ function size(x) {
 			$(".orderIngredients").last().append("<li>" + selectedIngredient + "</li>");
 		})
 
+		if ($('#cartToggle').prop('checked')) {
+			$("#cartToggle").prop("checked", true);
+		}else{
+			$("#cartToggle").prop("checked", true);
+		}
 
 		$(this).parent(".ui-dialog-content").dialog("close");
 
 		numOfOrders = $("#listOfOrders").children().length;
 		$(".num").text(numOfOrders);
-
+		
 		var totalOrderPrice = 0;
 		$("#listOfOrders").children("li").children(".orderPrice").children("span").each(function () {
 			var price = parseFloat($(this).text());
@@ -99,7 +139,7 @@ function size(x) {
 			numOfOrders = $("#listOfOrders").children().length;
 			$(".num").text(numOfOrders);
 		})
-	}); 
+	});
 
 	$(".finishOrder").on("click", function () {
      $("#finalOrderList > ol").children().remove();
