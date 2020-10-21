@@ -8,7 +8,6 @@ $(document).ready(function() {
 	var numOfOrders = 0;
 	$(".num").text(numOfOrders);
 
-	// hide dialogs on start
 	$("#thanksMessage, #checkOrderPizza, #finishOrderDialog").hide();
 
 
@@ -34,7 +33,7 @@ function size(x) {
 
 };
 	function checkboxChange(x) {
-		var priceDialog = 0;
+		var priceDialog = 700;
 		$("#recipe"+x).children("li").children("input").each(function () {
 			if($(this).is(":checked")){
 				priceDialog+=50;
