@@ -9,24 +9,9 @@ $(document).ready(function() {
 	$(".num").text(numOfOrders);
 
 	// hide dialogs on start
-	$("#thanksMessage, #checkOrderHamburger, #checkOrderMacaroni, #checkOrderPizza, #checkOrderSalad, #checkOrderSpaghetti, #checkOrderRisotto, #finishOrderDialog").hide();
+	$("#thanksMessage, #checkOrderPizza, #finishOrderDialog").hide();
 
-	// open dialog on click
-	$("#addToCartHamburger").on("click", function () {
-		$("#checkOrderHamburger").dialog({
-				hide: "blind",
-            	show : "blind",
-            	width: "400px",
-              closeText: "X"});
-	})
 
-	$("#addToCartMacaroni").on("click", function () {
-		$("#checkOrderMacaroni").dialog({
-				hide: "blind",
-            	show : "blind",
-            	width: "400px",
-              closeText: "X"});
-	})
 
 	$("#addToCartPizza").on("click", function () {
 		$("#checkOrderPizza").dialog({
@@ -36,29 +21,6 @@ $(document).ready(function() {
               closeText: "X"});
 	})
 
-	$("#addToCartSalad").on("click", function () {
-		$("#checkOrderSalad").dialog({
-				hide: "blind",
-            	show : "blind",
-            	width: "400px",
-              closeText: "X"});
-	})
-
-	$("#addToCartSpaghetti").on("click", function () {
-		$("#checkOrderSpaghetti").dialog({
-				hide: "blind",
-            	show : "blind",
-            	width: "400px",
-              closeText: "X"});
-	})
-
-	$("#addToCartRisotto").on("click", function () {
-		$("#checkOrderRisotto").dialog({
-				hide: "blind",
-            	show : "blind",
-            	width: "400px",
-              closeText: "X"});
-	})
 
 function size(x) {
   $("#size"+x).children("li").children("input").each(function () {
