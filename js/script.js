@@ -171,3 +171,4 @@ $('#size').children('li').click(checkboxChange(2));
 	})
 
 })
+};
