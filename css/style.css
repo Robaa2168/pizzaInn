@@ -9,7 +9,9 @@ h1 {
   line-height: 33px;
   text-align: center;
 }
-
+.red{
+  color: red;
+}
 h2 {
   font-family: 'Dancing Script', cursive;
   font-size: 27px;
