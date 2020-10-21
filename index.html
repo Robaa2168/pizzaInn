@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <title>Dababy-Pizaa</title>
@@ -26,43 +27,54 @@
   </header>
   <main>
     <section id="order-list">
-      <h2>Order(s)</h2>
+      <h2><u>Orders</u></h2>
+
+      <!-- Cart -->
       <nav class="cart">
-        <h3>List of orders: <span class="red">0Ksh</span></h3>
+        <h3>Order Total: <span class="red">0Ksh</span></h3>
         <ol id="listOfOrders">
         </ol>
         <a class="btnStyle btnStyle3 finishOrder">Finish Order</a>
       </nav>
+
     </section>
     <section id="menu">
-      <h2>Menu</h2>
+      <h2><u>Menu</u></h2>
+
       <div class="recipe">
         <img src="Images/dababy2.jpg" style="width:400px; height:140px"> <br>
       </div>
       <div class="side">
         <p class="name">As the leading pizza brand , Dababy Pizaa continues to deliver the best-tasting pizza using only the freshest ingredients. The pizza dough is made fresh daily in store. Our slogan, “Fresh Pizza!” captures the reason why
           friends, colleagues and families come to enjoy our famous pizzas. And with a great range to choose from, Dababy satisfies any hungry belly. Dababy Pizaa can be found in food courts boasting bright and contemporary décor..</p>
-        <a class="btnStyle3 btnStyle addToCart" id="addToPizza">Buy</a>
+        <a class="btnStyle3 btnStyle addToCart" id="addToCartPizza">Buy</a>
       </div>
       <div id="checkOrderPizza" title="Pizza">
         <h3 class="listHeading">Size:</h3>
-        <ul class="size" id="size">
+        <ul class="size" id="recipe1">
+          <p>Click on checkbox to uncheck</p>
           <li><input type="checkbox" value="500" checked>Small</li>
           <li><input type="checkbox" value="750">Medium</li>
-          <li><input type="checkbox" value="100">Large</li>
+          <li><input type="checkbox" value="1000">Large</li>
 
-        </ul>
-        <h3 class="listHeading">Toppings:</h3>
-        <ul class="listOfIngredients" id="recipe1">
-          <li><input type="checkbox" checked>Pepperoni</li>
-          <li><input type="checkbox" checked>Mushrooms</li>
-          <li><input type="checkbox" checked>Onions</li>
-          <li><input type="checkbox" checked>pancetta</li>
+
+          <h3 class="listHeading">Toppings:</h3>
+
+          <li><input type="checkbox" value="70">Pepperoni</li>
+          <li><input type="checkbox" value="100">Mushrooms</li>
+          <li><input type="checkbox" value="85">Onions</li>
+          <li><input type="checkbox" value="120">pancetta</li>
+          <h3 class="listHeading">Crust:</h3>
+
+          <li><input type="checkbox" value="150">Stuffed</li>
+          <li><input type="checkbox" value="130" checked>Gluten-free</li>
+          <li><input type="checkbox" value="100">Crispy</li>
+
 
         </ul>
         <a class="btnStyle3 btnStyle addIngredient">Add</a>
         <a class="btnStyle listOver">Done</a>
-        <h4 class="totalDialog" id="totalDialog1">Total: <span>15</span>Ksh</h4>
+        <h4 class="totalDialog" id="totalDialog1">Total: <span>750</span>Ksh</h4>
 
       </div>
 
